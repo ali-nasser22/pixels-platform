@@ -1,0 +1,14 @@
+# LARAVEL WORKSHOP
+
+
+## Local Development
+
+To run this project locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
