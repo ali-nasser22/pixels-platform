@@ -10,9 +10,18 @@
   <link href="./public/app.css" rel="stylesheet">
 </head>
 
-<body class="bg-pixel-dark text-pixel-light">
-  <h1 class="text-center text-4xl my-8">PIXELS</h1>
-  <div class="w-12 mx-auto my-0 h-12 bg-pixel"></div>
+<body class="bg-pixel-dark text-pixel-light h-dvh w-full overflow-clip relative">
+    <div class="absolute inset-0 overflow-clip">
+        <img alt="Background" class="absolute inset-y-0 mask-l-from-80% opacity-30 left-[15%] h-full w-full object-cover"
+             src="./public/images/Official-Login-BG.png" />
+    </div>
+    <footer class="fixed bottom-0 inset-x-0 pb-3">
+        <div class="flex flex-col gap-1.5 items-center  text-pixel p-4">
+            <p>All Rights Reserved. Pixel Media For Everyone*</p>
+            <p class="opacity-50 text-xs">*except for badgers, they're $&@*holes.</p>
+        </div>
+        <div class="h-4 absolute bottom-0 inset-x-0 bg-[url(/images/white-noise.gif)]"></div>
+    </footer>
 </body>
 
 </html>
