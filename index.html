@@ -10,15 +10,15 @@
   <link href="./public/app.css" rel="stylesheet">
 </head>
 
-<body class="bg-pixel-dark text-pixel-light h-dvh w-full overflow-clip relative">
+<body class="bg-pixel-dark text-pixel-light h-dvh w-full md:overflow-clip relative flex flex-col md:block">
         <!--Background Image-->
-    <div class="absolute inset-0 overflow-clip">
+        <div class="fixed inset-0 overflow-clip">
         <img alt="Background" class="absolute inset-y-0 mask-l-from-80% opacity-30 left-[15%] h-full w-full object-cover"
              src="./public/images/Official-Login-BG.png" />
     </div>
-        <main class="grid place-items-center h-full isolate max-w-[1000px] mx-auto px-8">
-           <div class="flex gap-16 justify-between items-center w-full">
-               <!--Left panel-->
+        <main class="grid place-items-center md:h-full isolate max-w-[1000px] xl:max-w-7xl mx-auto px-8 max-md:pt-16 flex-grow">
+           <div class="flex flex-col md:flex-row gap-8 md:gap-16 justify-between items-center w-full">
+               <!--Logo + Word Stack-->
                <div>
                    <div class="flex gap-3 items-baseline">
                        <svg
@@ -64,7 +64,7 @@
                                    fill="#EEE"
                            ></path>
                        </svg>
-                       <div class="uppercase text-4xl text-pixel relative">
+                       <div aria-hidden="true" class="hidden md:block uppercase text-4xl text-pixel relative">
 	                       <!--Top-->
 	                       <div class="absolute bottom-full my-2  flex flex-col gap-2 opacity-20">
 		                       <div class="opacity-50 flex flex-col gap-2">
@@ -99,10 +99,10 @@
                    </div>
 
                </div>
-               <!--Right Panel-->
-               <div class="w-80 max-w-full pb-16">
-                   <h1 class="text-pixel text-3xl">A place for the cool squares.</h1>
-                   <div class="flex flex-col gap-3 mt-16 w-68 text-center">
+               <!--Action Buttons-->
+               <div class="min-[360px]:w-72 sm:w-80 max-w-full pb-16">
+                   <h1 class="text-pixel text-2xl sm:text-3xl text-center md:text-left">A place for the cool squares.</h1>
+                   <div class="flex flex-col gap-3 mt-8 sm:mt-12 md:mt-16 md:w-68 text-center">
                        <a class="bg-pixel-dark/50 border border-pixel/50 px-4 py-1.5 text-pixel
                         hover:border-pixel/60 hover:bg-pixel-dark/60
                         active:border-pixel/75 active:bg-pixel-dark/75
@@ -115,18 +115,37 @@
                        <p>or</p>
                        <a class="bg-pixel text-pixel-dark px-4 py-1.5 border border-transparent hover:bg-pixel/90 transition-colors duration-150 active:bg-pixel/95 font-bold"
                           href="#">Create an Account</a>
-                       <p class="mt-20 text-left text-sm">Already have an account?</p>
+                       <p class="mt-12 sm:mt-16 md:mt-20 text-left text-sm ">Already have an account?</p>
                        <a class="bg-pixel text-pixel-dark px-4 py-1.5 border border-transparent hover:bg-pixel/90 transition-colors duration-150 active:bg-pixel/95 font-bold" href="#">Sign in</a>
                    </div>
                </div>
            </div>
         </main>
-    <footer class="fixed bottom-0 inset-x-0 pb-3">
-        <div class="flex flex-col gap-1.5 items-center  text-pixel p-4">
+        <footer class="md:fixed md:bottom-0 md:inset-x-0 pb-3 relative">
+        <div class="flex flex-col gap-1.5 items-center text-center text-pixel p-4">
             <p>All Rights Reserved. Pixel Media For Everyone*</p>
             <p class="opacity-50 text-xs">*except for badgers, they're $&@*holes.</p>
         </div>
         <div class="h-4 absolute bottom-0 inset-x-0 bg-[url(/images/white-noise.gif)]"></div>
+	        <!---Pictogram-->
+	        <svg
+			        class="absolute right-4 bottom-8 w-7 grayscale max-sm:hidden"
+			        fill="none"
+			        viewBox="0 0 29 43"
+			        xmlns="http://www.w3.org/2000/svg"
+	        >
+		        <g fill="#ECA749" opacity=".5" style="mix-blend-mode: luminosity">
+			        <path
+					        d="M7.058 0H0v7.058h7.058V0Zm0 7.058H0v7.059h7.058V7.058ZM28.234 0h-7.058v7.058h7.058V0Zm0 7.059h-7.058v7.058h7.058V7.059ZM7.058 28.233H0v7.059h7.058v-7.059Z"
+			        ></path>
+			        <path
+					        d="M7.058 35.291H0v7.059h7.058v-7.06Zm21.176-7.058h-7.058v7.059h7.058v-7.059Z"
+			        ></path>
+			        <path
+					        d="M28.234 35.291h-7.058v7.059h7.058v-7.06ZM14.117 21.175H7.059v7.058h7.058v-7.058Zm7.058-7.058h-7.058v7.058h7.058v-7.058Zm-7.058 0H7.059v7.058h7.058v-7.059Zm7.058 7.058h-7.058v7.058h7.058v-7.058Z"
+			        ></path>
+		        </g>
+	        </svg>
     </footer>
 </body>
 
