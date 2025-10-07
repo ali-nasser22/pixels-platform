@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-    --color-pixel:#eca749;
-    --color-pixel-light:#eeeeee;
-    --color-pixel-dark:#090909;
-    --font-pixel:'Departure Mono',monospace;
+    --color-pixel: #eca749;
+    --color-pixel-light: #eeeeee;
+    --color-pixel-dark: #090909;
+    --font-pixel: 'Departure Mono', monospace;
     --default-font-family: var(--font-pixel);
 }
 
@@ -15,5 +15,18 @@
         url("./fonts/DepartureMono-Regular.woff") format("woff");
         font-weight: 400;
         font-style: normal;
+    }
+}
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
     }
 }
